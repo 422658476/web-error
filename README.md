@@ -149,20 +149,26 @@ ublock、adblock、adguard或其他广告过滤扩展中如果给你网页添加
 js解释器会给出什么可笑的结果（以ublock为例）：
 
 例子1：
+
+```
 if (typeof var_xxxx_test == "undefined") {
 
 }else{
 	var_xxxx_test = null;
 	if(var_xxxx_test == null){
 			//正常情况下，js解释器给出的结果为跳转到此处，因为var_xxxx_test = null
+			//Under normal circumstances, the result given by the js interpreter is to jump here, because var_xxxx_test = null
 	}else{
 			//当扩展给你设置这个变量值之后，js解释器会跳转到此处，也就是var_xxxx_test 依旧为 1
+			//When the extension sets this variable value for you, the js interpreter will jump here, that is, var_xxxx_test is still 1
 	}
 }
+```
 
 例子2：
 我们稍微修改一下代码
 
+```
 if (typeof var_xxxx_test == "undefined") {
 
 }else{
@@ -171,9 +177,13 @@ if (typeof var_xxxx_test == "undefined") {
 			
 	}else{
 			//正常情况下，js解释器给出的结果为跳转到此处，因为var_xxxx_test = 999
+			//Under normal circumstances, the result given by the js interpreter is to jump here, because var_xxxx_test = 999
+			
 			//当扩展给你设置这个变量值之后，js解释器会跳转到此处，也就是var_xxxx_test =  999
+			//When the extension sets this variable value for you, the js interpreter will jump here, that is, var_xxxx_test = 999
 	}
 }
+```
 
 为什么会出现这么匪夷所思的现象，实际上只要站在ublock、adblock、adguard这些广告过滤扩展的立场思考很简单。
 
