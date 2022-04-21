@@ -1,5 +1,7 @@
 ## 把互联网标准出卖给扩展（ublock、adblock、adguard或其他扩展）的浏览器企业 | Browser companies that sell Internet standards to extensions (ublock, adblock, adguard, or others)
 
+### ![](./img/mpv-logo-128.png)  🌐 Language of this page  : `中文` | [`English`](https://github-com.translate.goog/422658476/web-error/?_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=zh-CN&_x_tr_pto=wapp)
+
 作者： https://github.com/422658476/
 
 原文地址：https://github.com/422658476/web-error
