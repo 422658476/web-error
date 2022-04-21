@@ -156,11 +156,11 @@ if (typeof var_xxxx_test == "undefined") {
 }else{
 	var_xxxx_test = null;
 	if(var_xxxx_test == null){
-			//正常情况下，js解释器给出的结果为跳转到此处，因为var_xxxx_test = null
-			//Under normal circumstances, the result given by the js interpreter is to jump here, because var_xxxx_test = null
+		//正常情况下，js解释器给出的结果为跳转到此处，因为var_xxxx_test = null
+		//Under normal circumstances, the result given by the js interpreter is to jump here, because var_xxxx_test = null
 	}else{
-			//当扩展给你设置这个变量值之后，js解释器会跳转到此处，也就是var_xxxx_test 依旧为 1
-			//When the extension sets this variable value for you, the js interpreter will jump here, that is, var_xxxx_test is still 1
+		//当扩展给你设置这个变量值之后，js解释器会跳转到此处，也就是var_xxxx_test 依旧为 1
+		//When the extension sets this variable value for you, the js interpreter will jump here, that is, var_xxxx_test is still 1
 	}
 }
 ```
@@ -176,11 +176,11 @@ if (typeof var_xxxx_test == "undefined") {
 	if(var_xxxx_test == null){
 			
 	}else{
-			//正常情况下，js解释器给出的结果为跳转到此处，因为var_xxxx_test = 999
-			//Under normal circumstances, the result given by the js interpreter is to jump here, because var_xxxx_test = 999
+		//正常情况下，js解释器给出的结果为跳转到此处，因为var_xxxx_test = 999
+		//Under normal circumstances, the result given by the js interpreter is to jump here, because var_xxxx_test = 999
 			
-			//当扩展给你设置这个变量值之后，js解释器会跳转到此处，也就是var_xxxx_test =  999
-			//When the extension sets this variable value for you, the js interpreter will jump here, that is, var_xxxx_test = 999
+		//当扩展给你设置这个变量值之后，js解释器会跳转到此处，也就是var_xxxx_test =  999
+		//When the extension sets this variable value for you, the js interpreter will jump here, that is, var_xxxx_test = 999
 	}
 }
 ```
@@ -203,17 +203,17 @@ if (typeof var_xxxx_test == "undefined") {
 
 2段代码，一段使用js往指定元素中插入菜单，一段使用js往另一个指定元素中插入"请关闭广告过滤扩展"文字
 
-		setTimeout(function(){
-			......
-				document.getElementById('menu').innerHTML = "html菜单内容";
-			......
-		}, 999);
+	setTimeout(function(){
+		......
+			document.getElementById('menu').innerHTML = "html菜单内容";
+		......
+	}, 999);
 
-		setTimeout(function(){
-				......
-				document.getElementById('xxxx').innerHTML = "请关闭广告过滤扩展";
-				......
-		}, 4444);
+	setTimeout(function(){
+			......
+			document.getElementById('xxxx').innerHTML = "请关闭广告过滤扩展";
+			......
+	}, 4444);
     
 ublock、adblock、adguard或其他广告过滤扩展中如果给你网页添加了下面这行规则。
 
@@ -223,14 +223,14 @@ ublock、adblock、adguard或其他广告过滤扩展中如果给你网页添加
 
 如果你使用第三段类似的代码来测试这个现象时：
 
-		setTimeout(function(){
-			......
-				document.getElementById('menu_aaaaa').innerHTML = "html菜单内容";
-			......
-			......
-				document.getElementById('xxxx_aaaaaa').innerHTML = "请关闭广告过滤扩展";
-			......
-		},2222);
+	setTimeout(function(){
+		......
+			document.getElementById('menu_aaaaa').innerHTML = "html菜单内容";
+		......
+		......
+			document.getElementById('xxxx_aaaaaa').innerHTML = "请关闭广告过滤扩展";
+		......
+	},2222);
     
 你可能会发现第三段代码中2个innerHTML行为
 
