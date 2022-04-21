@@ -207,13 +207,13 @@ if (typeof var_xxxx_test == "undefined") {
 
 	setTimeout(function(){
 		......
-			document.getElementById('menu').innerHTML = "html菜单内容";
+			document.getElementById('menu').innerHTML = "html菜单内容|html menu content";
 		......
 	}, 999);
 
 	setTimeout(function(){
 			......
-			document.getElementById('xxxx').innerHTML = "请关闭广告过滤扩展";
+			document.getElementById('xxxx').innerHTML = "请关闭广告过滤扩展|Please turn off the ad filter extension";
 			......
 	}, 4444);
     
@@ -227,10 +227,10 @@ ublock、adblock、adguard或其他广告过滤扩展中如果给你网页添加
 
 	setTimeout(function(){
 		......
-			document.getElementById('menu_aaaaa').innerHTML = "html菜单内容";
+			document.getElementById('menu_aaaaa').innerHTML = "html菜单内容|html menu content";
 		......
 		......
-			document.getElementById('xxxx_aaaaaa').innerHTML = "请关闭广告过滤扩展";
+			document.getElementById('xxxx_aaaaaa').innerHTML = "请关闭广告过滤扩展|Please turn off the ad filter extension";
 		......
 	},2222);
     
@@ -259,11 +259,11 @@ ublock、adblock、adguard或其他广告过滤扩展中如果给你网页添加
 
 不管是【web开发者工具】的控制台（红色文字显示这种行为的错误），还是
 window.addEventListener('error',function(event) {	
-				if(event.target.tagName == "SCRIPT" || event.target.tagName == undefined){
+	if(event.target.tagName == "SCRIPT" || event.target.tagName == undefined){
 
-				}
-	},true);
-  
+	}
+},true);
+
 都应该能收集到错误，这个应该是浏览器遇到链接加载错误的标准的抛出error的行为。
 
 但当在ublock中出现下面或者类似的规则后：
@@ -273,6 +273,8 @@ window.addEventListener('error',function(event) {
 【web开发者工具】的控制台和window.addEventListener一切正常，平安无事，为什么要给扩展这种权限。浏览器：我不知道啊，我真的不知道。
 
 当然还有其他更多的罪责。。。。欢迎补充。
+
+如果你觉得上面这些内容有些不可思议，依旧只需要看ublock的wiki即可，上面的内容更加丰富和精彩。
 
 所以从头到尾看到，ublock、adblock、adguard这些广告过滤扩展根本没有任何什么公平公正的原则，一群根本就不知道什么是标准的人在给所有的浏览器制定的他们心中所谓的理想标准：我说行就行，我说你不行就不行。
 
