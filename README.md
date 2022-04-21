@@ -258,11 +258,14 @@ ublock、adblock、adguard或其他广告过滤扩展中如果给你网页添加
 ||cpro.baidu.com/cpro/ui/rt.js$script,redirect=noop.js,domain=xxx.com,important  			//意思：阻止加载rt.js链接后让rt.js跳转到noop.js，假装它成功加载了
 
 不管是【web开发者工具】的控制台（红色文字显示这种行为的错误），还是
+
+```
 window.addEventListener('error',function(event) {	
 	if(event.target.tagName == "SCRIPT" || event.target.tagName == undefined){
 
 	}
 },true);
+```
 
 都应该能收集到错误，这个应该是浏览器遇到链接加载错误的标准的抛出error的行为。
 
